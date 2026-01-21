@@ -171,13 +171,6 @@ public class VanillaWidgetElement extends ButtonElement implements HideableEleme
         this.vanillaButtonHidden = hidden;
     }
 
-    @Override
-    public float getBaseOpacity() {
-        float o = super.getBaseOpacity();
-        if (this.isCopyrightButton() && (o < 0.4F)) o = 0.4F;
-        return o;
-    }
-
     public boolean isCopyrightButton() {
         if (this.widgetMeta == null) return false;
         String compId = ((UniqueWidget)this.widgetMeta.getWidget()).getWidgetIdentifierFancyMenu();
